@@ -1,25 +1,48 @@
-*
-  margin: 0
-  padding: 0
-  box-sizing: border-box
+@import "_nullstyle.sass"
 
-button
-  cursor: pointer
-
-img
-  max-width: 100%
-  max-height: 100%
-  width: 100%
-  height: 100%
-  min-width: 100%
-  min-height: 100%
+$top-color: #333333
+$font-color: #8e8c8c
+$add-color: #00c8c8
 
 body
-  font-family: 'Montserrat Regular', sans-serif
+  font-family: 'Montserrat', sans-serif
 
-a
-  text-decoration: none
-  color: #000000
-  
-ul
-  list-style: none
+header
+  padding: 150px 0
+  color: #fff
+  text-align: center
+  background-image: url(../image/backgraund.jpg)
+  background-size: cover
+  background-position-y: center
+  background-repeat: no-repeat
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: $top-color
+    opacity: 0.7
+    z-index: 2
+  h1
+    font-size: 48px
+    letter-spacing: 2px
+    line-height: 54px
+    margin-bottom: 50px
+    position: relative
+    z-index: 5
+    span 
+      font-weight: 700
+  p 
+    font-size: 30px
+    letter-spacing: 2px
+    line-height: 54px
+    position: relative
+    z-index: 5
+    span 
+      color: $add-color
+
+
+
