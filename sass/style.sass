@@ -3,26 +3,21 @@
 $top-color: #333333
 $font-color: #8e8c8c
 $add-color: #00c8c8
+$mw: 1200px
+$md1: $mw + 12px
+$md2: 992.98px
+$md3: 767.98px
+$md4: 479.98px
 
 body
   font-family: 'Montserrat', sans-serif
+
+button, a
   cursor: pointer
 
-.main-container 
-  min-height: 100%
-  max-width: 1200px
-  margin: 0 auto
-  display: flex
-  flex-direction: column
-  @media (max-width: 1200px)
-    max-width: 970px
-  @media (max-width: 992px)
-    max-width: 750px
-  @media (max-width: 767px)
-    max-width: none
-  
 .header-container
-  padding: 50px 0
+  padding: 150px 0 150px 0
+  height: 100%
   color: #fff
   text-align: center
   background-image: url(../image/backgraund.jpg)
@@ -30,6 +25,12 @@ body
   background-position-y: center
   background-repeat: no-repeat
   position: relative
+  @media screen and ( max-width: $md1 )
+    padding: 70px 0 70px 0
+  @media screen and ( max-width: $md2 )
+    padding: 50px 0 50px 0 
+  @media screen and ( max-width: $md3 )
+    padding: 25px 0 25px 0 
   &::after
     content: ''
     position: absolute
@@ -41,16 +42,28 @@ body
     opacity: 0.7
     z-index: 2
   .header-logo
-    font-size: 45px
+    font-size: 48px
     letter-spacing: 2px
     line-height: 54px
-    margin-bottom: 30px
+    margin-bottom: 50px
     position: relative
     z-index: 5
     span 
       font-weight: 700
+    @media screen and ( max-width: $md1 )
+      font-size: 40px
+      line-height: 50px
+      margin-bottom: 30px
+    @media screen and ( max-width: $md2 )
+      font-size: 30px
+      line-height: 40px
+      margin-bottom: 25px
+    @media screen and ( max-width: $md3 )
+      font-size: 25px
+      line-height: 30px
+      margin-bottom: 15px
   .header-text 
-    font-size: 25px
+    font-size: 30px
     letter-spacing: 2px
     line-height: 54px
     position: relative
@@ -59,45 +72,73 @@ body
     text-transform: uppercase
     span 
       color: $add-color
-
+    @media ( max-width: $md1 )
+      font-size: 25px
+      line-height: 40px
+    @media ( max-width: $md2 )
+      font-size: 20px
+      line-height: 30px
+    @media ( max-width: $md2 )
+      font-size: 16px
+      line-height: 20px
+    
 .Product-container
-  flex: 1 1 auto
-  margin: 50px auto
-  width: 1400px / 2000px *100%
+  width: 70%
+  height: 100%
+  max-width: $mw
+  padding: 20px 0 20px 0
+  margin: 0 auto
   display: flex
   flex-direction: column
-  justify-content: space-between
   align-items: center
-  @media ( max-width: 767px )
-    width: 100%
-
+  @media screen and ( max-width: $md4  )
+    width: 90%
+    
 .Product-container-short
+  height: 100%
+  max-height: 700px
   display: flex
   flex-direction: row
-  margin: 0 -8px
+  margin: 0 -10px 20px 0
+  padding: 10px 0 10px 0
   justify-content: space-between
-  @media (max-width: 767px)
+  @media screen and ( max-width: $md1  )
+    max-height: 500px
+  @media screen and ( max-width: $md2  )
     flex-direction: column
-    flex-basis: 100%
     align-items: center
-    justify-content: space-between
-
+    margin: 0 0 10px 0
+    height: 100%
+    max-height: 100%
+    
 .Product-image-container
-  width: 50%
+  flex: 1 1 50%
   height: 100%
-  padding: 0 8px
-  
+  min-width: 560px
+  padding: 0 20px 0 0
+  @media screen and ( max-width: $md1 )
+    min-width: 400px
+    min-height: 500px
+  @media screen and ( max-width: $md2 )
+    min-height: 500px
+    min-width: 400px
+    padding: 0
+    margin-bottom: 10px
+  @media screen and ( max-width: $md4 )
+    min-height: 380px
+    min-width: 300px
+ 
 .slider-container
-  min-width: 200px
-  min-height: 500px
   position: relative
+  width: 100%
+  height: 100%
   input
     display: none
   
 .product-image
+  position: relative
   width: 100%
   height: 100%
-  position: relative
   ul
     width: 100%
     height: 100%
@@ -107,13 +148,19 @@ body
       position: absolute
       visibility: hidden
       opacity: 0
-      transition: img 0s 0s ease-out
-      img 
+      img
         width: 100%
-        height: auto
+        max-height: 700px
         &:hover
           border: 2px solid $add-color
-
+      @media screen and ( max-width: $md2  )
+        max-height: 700px
+        max-width: 500px
+      @media screen and ( max-width: $md4 )
+        max-height: 400px
+        max-width: 300px
+    
+              
 .swich1:checked ~ .product-image ul > li:first-child
   visibility: visible
   opacity: 1
@@ -128,6 +175,10 @@ body
   color: $top-color
   position: absolute
   margin-top: 50% 
+  margin-bottom: -50%
+  margin-left: 0
+  margin-left: 0
+  cursor: pointer
   &:hover
     background-color: $add-color
     color: #fff
@@ -139,33 +190,55 @@ body
   right: 0
 
 .Product-details-container
-  width: 50%
-  padding: 0 8px
-  min-height: 500px
+  height: 100%
+  flex: 1 1 50%
+  min-width: 500px
+  padding: 0 20px 0 0
   display: flex
   flex-direction: column
   justify-content: space-between
   color: $font-color
-  
+  @media screen and ( max-width: $md1 )
+    min-width: 400px
+  @media screen and ( max-width: $md2  )
+    min-width: 250px
+    max-width: 400px
+    padding: 0
+    
+   
 .Product-title
   font-size: 18px
   line-height: 20px
   text-transform: uppercase
   color: $top-color
   font-weight: 700
+  margin-bottom: 20px
+  @media screen and ( max-width: $md1 )
+    margin-bottom: 10px
+  @media screen and ( max-width: $md4  )
+    margin-bottom: 5px
+    font-size: 14px
+    line-height: 16px 
 
 .Product-reviews-container
   display: flex
   flex-direction: row
+  flex-wrap: wrap
+  margin-bottom: 20px
   justify-content: space-between
   align-items: center
   font-size: 13px
   line-height: 30px
-  @media ( max-width: 300px )
-    flex-direction: column
-       
+  a
+    cursor: pointer
+  @media screen and ( max-width: $md1 )
+    font-size: 10px
+    margin-bottom: 10px
+         
 .Product-rating
-  font-size: 10px
+  font-size: 16px
+  @media screen and ( max-width: $md1 )
+    font-size: 10px
 
 .Product-reviews
   display: flex
@@ -181,57 +254,146 @@ body
     margin-left: 10px
     li 
       display: inline-block
-      margin-left: 5px
+      margin-right: 5px
+      &:last-child
+        margin-right: 0 
 
 .Product-priсe
   font-size: 30px
   letter-spacing: 2px
+  line-height: 36px
+  margin-bottom: 30px
   p
     display: inline-block
     margin-right: 10px
     i 
       vertical-align: super
       font-size: 20px
+      @media screen and ( max-width: $md1 )
+        font-size: 15px
   .Product-old-priсe
     text-decoration: line-through
+  @media screen and ( max-width: $md1 )
+    font-size: 20px
+    line-height: 28px
+    margin-bottom: 15px
 
 .Product-details-store
-  font-size: 15px
-  line-height: 30px
+  margin-bottom: 30px
   .Product-details-store-item
+    font-size: 15px
+    line-height: 30px
     word-spacing: 2px
+    @media screen and ( max-width: $md1 )
+      line-height: 20px
+      font-size: 12px
     span 
       color: $top-color
       font-weight: 700
     a 
       color: $add-color
       font-weight: 700
+  @media screen and ( max-width: $md1 )
+    margin-bottom: 15px
 
 .Product-details-text
   font-size: 15px
   line-height: 22px
+  margin-bottom: 40px
+  font-family: 'Roboto', sans-serif
+  @media screen and ( max-width: $md1 )
+    margin-bottom: 20px
+    line-height: 18px
+    font-size: 10px
+  p 
+    text-align: justify
+    margin-bottom: 5px
   ul 
-    list-style: disc inside
-    margin-top: 5px
+    list-style: disc inside 
 
 .Product-details-options
   display: flex
+  margin-bottom: 40px
+  align-items: center
+  @media screen and ( max-width: $md1 )
+    margin-bottom: 15px
 
 .Product-options
   margin-right: 10px
+  display: flex
+  flex-direction: column
   label 
     text-transform: uppercase 
     font-weight: 700
     color: $top-color
+    font-size: 15px
+    @media screen and ( max-width: $md1 )
+      font-size: 10px
   input 
-    padding: 10px 10px
+    padding: 10px 0 10px 10px
     margin-top: 10px
+    max-width: 170px
     width: 100%
     border: 1px solid $font-color
+    @media screen and ( max-width: $md1 )
+      padding: 5px
+    .qty
+      max-width: 70px
     &:placeholder 
-    font-size: 13px
-    font-family: 
-    padding-left: 10px
+      font-size: 13px
+      font-family: inherit
+      padding-left: 10px
+
+.Product-button-container
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-between
+  align-content: space-between
+  .Product-button
+    .fa
+      margin-right: 5px
+    .Product-button-item
+      display: inline-block
+      padding: 20px 30px
+      text-transform: uppercase
+      font-size: 14px
+      letter-spacing: 2px
+      font-weight: 700
+      border: 2px solid $top-color
+      color: $top-color
+      background-color: #fff
+      @media screen and ( max-width: $md1 )
+        padding: 10px 20px
+        font-size: 12px
+        letter-spacing: 1px
+        border: 1px solid $top-color
+      @media screen and ( max-width: $md4  )
+        padding: 10px 5px
+        font-size: 10px
+      &:hover
+        color: #ffffff
+        background-color: $top-color     
+    .Product-button-item--comper     
+      display: inline-block
+      padding: 15px 0
+      font-size: 14px
+      letter-spacing: 2px
+      text-transform: uppercase
+      @media screen and ( max-width: $md1 )
+        font-size: 12px
+        letter-spacing: 1px
+      @media screen and ( max-width: $md4  )
+        padding: 10px 0
+        font-size: 10px
+      .fa-compress-alt
+        background-color: $font-color
+        border: 6px solid $font-color
+        border-radius: 100%
+        color: #ffffff
+        font-weight: 700
+        @media screen and ( max-width: $md4  )
+          border: 4px solid $font-color
 
 
 
