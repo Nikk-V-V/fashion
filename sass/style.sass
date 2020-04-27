@@ -395,7 +395,75 @@ button, a
         @media screen and ( max-width: $md4  )
           border: 4px solid $font-color
 
+.Product-discription-container
+  min-width: 1050px
+  height: 100%
+  @media screen and ( max-width: $md1 )
+    min-width: 800px
+  @media screen and ( max-width: $md2 )
+    min-width: 80%
+  @media screen and ( max-width: $md3 )
+    min-width: 100%
+  @media screen and ( max-width: $md3 )
+    min-width: 100% 
 
+.Product-discription-button
+  background-color: #eff0f1
+  margin-bottom: 25px
+  .Product-discription-button-list
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 80%
+    @media screen and ( max-width: $md2 )
+      width: 100%
+      flex-wrap: wrap
+      align-content: space-around
+
+.Product-discription-button__item
+  a
+    display: inline-block
+    padding: 15px 15px 15px 15px
+    font-size: 16px
+    line-height: 20px
+    text-transform: uppercase
+    color: $top-color
+    &:hover
+      color: #fff
+      background-color: $top-color
+      cursor: pointer
+    @media screen and ( max-width: $md1 )
+      padding: 10px
+      font-size: 14px
+    @media screen and ( max-width: $md2 )
+      line-height: 14px
+      font-size: 12px
+    @media screen and ( max-width: $md3 )
+      font-size: 10px
+      padding: 5px
+  
+.Product-discription-text__item
+  line-height: 22px
+  font-size: 15px
+  color: $font-color
+  font-family: "Roboto"
+  text-align: justify
+  display: none
+  @media screen and ( max-width: $md3 )
+    font-size: 10px
+    line-height: 15px
+  h6 
+    color: $top-color
+    text-transform: uppercase
+    margin-bottom: 15px
+    @media screen and ( max-width: $md3 )
+      margin-bottom: 5px
+  p 
+    margin-bottom: 20px
+    @media screen and ( max-width: $md3 )
+      margin-bottom: 5px
+  &:target
+    display: block
 
 
 

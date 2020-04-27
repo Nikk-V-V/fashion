@@ -749,3 +749,138 @@ button, a {
     border: 4px solid #8e8c8c;
   }
 }
+
+.Product-discription-container {
+  min-width: 1050px;
+  height: 100%;
+}
+
+@media screen and (max-width: 1212px) {
+  .Product-discription-container {
+    min-width: 800px;
+  }
+}
+
+@media screen and (max-width: 992.98px) {
+  .Product-discription-container {
+    min-width: 80%;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .Product-discription-container {
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .Product-discription-container {
+    min-width: 100%;
+  }
+}
+
+.Product-discription-button {
+  background-color: #eff0f1;
+  margin-bottom: 25px;
+}
+
+.Product-discription-button .Product-discription-button-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+}
+
+@media screen and (max-width: 992.98px) {
+  .Product-discription-button .Product-discription-button-list {
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-line-pack: distribute;
+        align-content: space-around;
+  }
+}
+
+.Product-discription-button__item a {
+  display: inline-block;
+  padding: 15px 15px 15px 15px;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.Product-discription-button__item a:hover {
+  color: #fff;
+  background-color: #333333;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1212px) {
+  .Product-discription-button__item a {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 992.98px) {
+  .Product-discription-button__item a {
+    line-height: 14px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .Product-discription-button__item a {
+    font-size: 10px;
+    padding: 5px;
+  }
+}
+
+.Product-discription-text__item {
+  line-height: 22px;
+  font-size: 15px;
+  color: #8e8c8c;
+  font-family: "Roboto";
+  text-align: justify;
+  display: none;
+}
+
+@media screen and (max-width: 767.98px) {
+  .Product-discription-text__item {
+    font-size: 10px;
+    line-height: 15px;
+  }
+}
+
+.Product-discription-text__item h6 {
+  color: #333333;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .Product-discription-text__item h6 {
+    margin-bottom: 5px;
+  }
+}
+
+.Product-discription-text__item p {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .Product-discription-text__item p {
+    margin-bottom: 5px;
+  }
+}
+
+.Product-discription-text__item:target {
+  display: block;
+}
