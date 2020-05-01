@@ -92,16 +92,17 @@ ul
 .category
   background-image: url("./img/photo.png")
   background-repeat: no-repeat
-  height: 983px
+  height: 920px
   background-position-x: center
   background-color: #f8f8f8
 
 .category-container
   padding: 40px 0
+  flex-wrap: wrap
   .text-logo
     font-size: 24px
-  .bold
-    font-weight: bold
+.bold
+  font-weight: bold
 
 .nav-category
   align-items: baseline
@@ -133,6 +134,7 @@ ul
   flex-wrap: wrap
   position: absolute
   top: 25px
+  z-index: 100
   box-shadow: 0 5px 5px 5px #cdcdcd
   background-color: #f8f8f8
   .banner
@@ -165,7 +167,8 @@ ul
     padding: 7px
     background: #ffffff
     border: 0
-    font-size: 15px
+    font-size: 14px
+
 
 .ave
   font-size: 20vw
@@ -175,13 +178,19 @@ ul
 
 
 .btn-men-col
-  margin: 3% 0
+  margin: 5% 0
   justify-content: flex-end
+  color: #454647
   p
     margin-right: 20%
     font-size: 16px
     padding: 20px
-    border: 1px solid
+    border: 1px solid #737373
+    cursor: pointer
+    &:hover
+      background-color: #00c8c8
+      color: white
+      border: 1px solid #00c8c8
 
 .recommend-container
   margin: 50px 10%
@@ -191,8 +200,10 @@ ul
 
 .recommend-nav-menu
   margin-bottom: 50px
+  flex-wrap: wrap
   .item
-    font-size: 1vw
+    color: #575153
+    font-size: 14px
     margin-right: 50px
     cursor: pointer
   .item:hover
@@ -201,6 +212,7 @@ ul
 .section
   flex-direction: column
   width: 49%
+  min-width: 250px
 
 .small-img
   height: 49%
@@ -211,29 +223,183 @@ ul
   height: 49%
 
 
-.news
-  margin-bottom: 62px
+.news-container
+  flex-wrap: wrap
+
 .new
-  width: 32%
   background-color: #f8f8f8
-  padding: 2% 2% 0 0
+  padding: 0 4rem 0 0
+  margin: 2rem 1rem 0 0
 
 .text-new
   flex-direction: column
-  width: 50%
+  width: 280px
   text-align: end
-
+  color: #575153
 
 .title-new
-  font-size: 1.5vw
+  font-size: 48px
+  margin-bottom: 1rem
   .bold
     font-weight: bold
 
-.photo-new
-  width: 50%
 
 .btn-new
-  padding: 10%
-  border: 1px solid black
-  margin-top: 30px
+  padding: 1rem
+  width: 150px
+  text-align: center
+  cursor: pointer
+  border: 1px solid #737373
+  margin-top: 2rem
   margin-left: auto
+  &:hover
+    background-color: #00c8c8
+    color: white
+    border: 1px solid #00c8c8
+
+.information
+  padding-top: 63px
+  margin-top: 124px
+  background-color: #f8f8f8
+
+.section-inf
+  width: 210px
+  font-size: 14px
+  color: #575153
+  margin-right: 1rem
+  .title-inf
+    margin-bottom: 2rem
+  .list-inf
+    margin-bottom: 1rem
+
+
+.banner-section
+  margin-top: 5rem
+  font-size: 36px
+  text-align: center
+  color: white
+
+.banner-bottom
+  padding: 4.5vw
+  width: 45%
+  height: 13.5vw
+  font-size: 2vw
+
+
+.banner-dis
+  background-color: #333333
+
+.banner-social
+  background-color: #00c8c8
+
+.footer-bottom
+  margin-top: 54px
+  width: 100%
+  background-color: #333333
+  color: #777777
+
+.footer-item
+  padding: 1rem
+
+
+@media all and (max-width: 1150px)
+  .block-sections
+    flex-direction: column
+    .section-inf
+      width: 100%
+      margin: 0
+      .title-inf
+        text-align: center
+        margin-top: 2rem
+    .inf-cont
+      display: flex
+      justify-content: space-around
+      flex-wrap: wrap
+      .list-inf
+        margin: 1rem
+        text-align: center
+
+@media all and (max-width: 980px)
+  .category-container
+    .text-logo
+      margin-bottom: 2rem
+  .nav-category
+    flex-wrap: wrap
+    justify-content: center
+  .category
+    height: 670px
+    .category-menu
+      margin-bottom: 2rem
+    .search
+      margin: 0
+  .btn-men-col
+    margin: 4rem 0
+    p
+      margin: 0 auto
+
+  .recommend-container
+    .recommend-nav-menu
+      justify-content: space-around
+      .item
+        margin: 0 1rem
+  .footer-bottom
+    .container
+      flex-direction: column
+      align-items: center
+  .currency-menu
+    i
+      display: none
+  .text-card
+    i
+      display: none
+
+
+@media all and (max-width: 680px)
+  .category-menu
+    flex-direction: column
+    align-items: center
+    .list-items
+      margin-bottom: 1rem
+      i
+        display: none
+  .search
+    margin: 0
+  .drop-box
+    top: 15px
+    right: -183px
+  .section
+    width: 100%
+
+  .recommend-products
+    flex-direction: column
+    align-items: center
+  .new
+    margin: 1rem 0
+    padding: 0 2rem 0 0
+    width: 100%
+  .title-new
+    font-size: 20px
+
+  .new
+    padding: 0
+    flex-direction: column
+    align-items: center
+    .photo-new
+      width: 150px
+    .text-new
+      text-align: center
+    .btn-new
+      margin: 1rem auto
+
+  .nav-menu
+    height: 100%
+    .container
+      flex-direction: column
+      margin: 1rem 0
+      .cart
+        padding: 10px
+        margin: 0
+  .auth-cart-menu
+    width: 100%
+    justify-content: space-around
+    align-items: center
