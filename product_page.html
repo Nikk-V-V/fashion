@@ -21,7 +21,6 @@
       href="https://use.fontawesome.com/releases/v5.12.1/css/v4-shims.css"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="import" href="footer/footer.html">
     <title>Product Viev</title>
   </head>
   <body>
@@ -50,21 +49,21 @@
               <div class="product-image">
                 <ul>
                   <li>
-                    <a href="swich2" class="pre"
+                    <label for="swich2" class="pre"
                       ><i class="fa fa-angle-left"></i
-                    ></a>
-                    <a href="swich2" class="next"
+                    ></label>
+                    <label for="swich2" class="next"
                       ><i class="fa fa-angle-right"></i
-                    ></a>
+                    ></label>
                     <img src="image/product.jpg" alt="image sweatshirt" />
                   </li>
                   <li>
-                    <a href="swich1" class="pre"
+                    <label for="swich1" class="pre"
                       ><i class="fa fa-angle-left"></i
-                    ></a>
-                    <a href="swich1" class="next"
+                    ></label>
+                    <label for="swich1" class="next"
                       ><i class="fa fa-angle-right"></i
-                    ></a>
+                    ></label>
                     <img src="image/person.png" alt="image sweatshirt" />
                   </li>
                 </ul>
@@ -256,11 +255,87 @@
               </ul>
             </div>
       </section>
-      <script>
-        var link = document.querySelector('link[rel=import]');
-        var content = link.import.querySelector('#footer');
-        document.body.appendChild(content.cloneNode(true));
-      </script>
+      <footer>
+        <div class="footer-top">
+          <div class="footer-info container">
+            <div class="footer-info-column">
+              <h5 class="footer-info-title">Information</h5>
+              <div class="footer-info-list">
+                <a href="">The brand</a>
+                <a href="">Local stores</a>
+                <a href="">Customer service</a>
+                <a href="">Privacy & cookies</a>
+                <a href="">Site map</a>
+              </div>
+            </div>
+            <div class="footer-info-column">
+              <h5 class="footer-info-title">Why buy from us</h5>
+              <div class="footer-info-list">
+                <a href="">Shipping & returns</a>
+                <a href="">Secure shopping</a>
+                <a href="">Testimonials</a>
+                <a href="">Award winning</a>
+                <a href="">Ethical trading</a>
+              </div>
+            </div>
+            <div class="footer-info-column">
+              <h5 class="footer-info-title">Your account</h5>
+              <div class="footer-info-list">
+                <a href="">Sign in</a>
+                <a href="">Register</a>
+                <a href="">View carts</a>
+                <a href="">View your lookbook</a>
+                <a href="">Track an order</a>
+                <a href="">Update information</a>
+              </div>
+            </div>
+            <div class="footer-info-column">
+              <h5 class="footer-info-title">Lookbook</h5>
+              <div class="footer-info-list">
+                <a href="">Latest posts</a>
+                <a href="">Men’s lookbook</a>
+                <a href="">Women’s lookbook</a>
+                <a href="">Lookbooks RSS feed</a>
+                <a href="">View your lookbook</a>
+                <a href="">Delete your lookbook</a>
+              </div>
+            </div>
+            <div class="footer-info-column footer-info-column--cont">
+              <h5 class="footer-info-title">Contact details</h5>
+              <div class="footer-info-list">
+                <p>
+                  Head Office: Avenue Fashion, 180-182 Regent Street, London.
+                </p>
+                <a href="tel:0123456789">Telephone: 0123-456-789</a>
+                <a href="mailto:support@yourwebsite.com"
+                  >Email: support@yourwebsite.com</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="footer-button container">
+            <button class="footer-button-column footer-button-column--1">
+              <h1>Award winner</h1>
+              <p>Fashion awards 2016</p>
+            </button>
+            <button class="footer-button-column footer-button-column--2">
+              <i class="fa fa-facebook-f"></i><i class="fa fa-twitter"></i
+              ><i class="fa fa-instagram"></i><i class="fab fa-pinterest-p"></i>
+            </button>
+          </div>
+        </div>
+        <div class="footer-bootom">
+          <div class="footer-bootom-container container">
+            <div class="footer-bootom-logo">
+              <i class="fa fa-copyright"></i>2016 Avenue Fashion<span>TM</span>
+            </div>
+            <div class="footer-bottom-author">
+              <p>Design by <a>RobbyDesigns.com</a></p>
+              <p>Dev by <a>Loremipsum.com</a></p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main> 
   </body>
 </html>
