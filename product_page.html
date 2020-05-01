@@ -21,6 +21,7 @@
       href="https://use.fontawesome.com/releases/v5.12.1/css/v4-shims.css"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="import" href="footer/footer.html">
     <title>Product Viev</title>
   </head>
   <body>
@@ -80,10 +81,8 @@
                 <span class="fa fa-star"></span>
                 <span class="fa fa-star"></span>
               </div>
-              <div class="Product-reviews"><a>(3)Reviews</a></div>
-              <div>|</div>
-              <div class="Product-reviews"><a>Add a reviews</a></div>
-              <div>|</div>
+              <div class="Product-reviews rev"><a>(3)Reviews</a></div>
+              <div class="Product-reviews rev"><a>Add a reviews</a></div>
               <div class="Product-reviews">
                 <p>Share:</p>
                 <ul>
@@ -257,6 +256,11 @@
               </ul>
             </div>
       </section>
+      <script>
+        var link = document.querySelector('link[rel=import]');
+        var content = link.import.querySelector('#footer');
+        document.body.appendChild(content.cloneNode(true));
+      </script>
     </main> 
   </body>
 </html>
