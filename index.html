@@ -1,16 +1,374 @@
-<!DOCTYPE html>
-<html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="main.css" />
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="home-page/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/v4-shims.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>Document</title>
-  </head>
-  <body>
-    <section></section>
-  </body>
+</head>
+<body>
+
+<header>
+    <section class="nav-menu d-flex j-center">
+        <div class="container d-flex j-around a-center">
+            <div class="currency-menu">
+                Currency&#32;:&#32;GBP
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <nav class="auth-cart-menu d-flex">
+                <div class="auth d-flex">
+                    <p class="">Register</p>
+                    <p class="">Sign In</p>
+                </div>
+                <div class="cart d-flex">
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="text-card">
+                        <a target="_self" href="./product-page/product_page.html">
+                            empty
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+</header>
+<main>
+    <section class="category d-flex j-center">
+        <div class="container">
+            <div class="category-container d-flex j-around a-center">
+                <div class="text-logo">
+                    <span class="bold">AVENUE</span> FASHION
+                </div>
+                <nav class="nav-category d-flex">
+                    <ul class="category-menu d-flex j-around">
+                        <li class="list-items d-flex">
+                            <a href="">MENS</a>
+                            <i class="fas fa-chevron-down"></i>
+                            <div class="drop-box">
+                                <div class="casual drop-section">
+                                    <div class="title-category">
+                                        CASUAL
+                                    </div>
+                                    <div class="list">
+                                        <p class="items">Jackets</p>
+                                        <p class="items">Hoodies & Sweatshirts</p>
+                                        <p class="items">Polo Shirts</p>
+                                        <p class="items">Sportswear</p>
+                                        <p class="items">Trousers & Chinos</p>
+                                        <p class="items">T-Shirts</p>
+                                    </div>
+                                </div>
+                                <div class="formal drop-section">
+                                    <div class="title-category">
+                                        FORMAL
+                                    </div>
+                                    <div class="list">
+                                        <p class="items">Jackets</p>
+                                        <p class="items">Shirts</p>
+                                        <p class="items">Suits</p>
+                                        <p class="items">Trousers</p>
+                                    </div>
+                                </div>
+                                <div class="banner">
+                                    <img src="assets/img/banner.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-items d-flex">
+                            <a href="">WOMENS</a>
+                            <i class="fas fa-chevron-down"></i>
+                        </li>
+                        <li class="list-items d-flex">
+                            <a href="">THE BRAND</a>
+                        </li>
+                        <li class="list-items d-flex">
+                            <a href="">LOCAL STORES</a>
+                            <i class="fas fa-chevron-down"></i>
+                        </li>
+                        <li class="list-items d-flex">
+                            <a href="">LOOK BOOK</a>
+                            <i class="fas fa-chevron-down"></i>
+                        </li>
+                    </ul>
+                    <div class="search">
+                        <label>
+                            <input class="search-input" type="text" placeholder="search">
+                            <button class="search-btn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </label>
+                    </div>
+                </nav>
+            </div>
+            <div class="ave">
+                A V E
+            </div>
+            <div class="btn-men-col d-flex">
+                <p>
+                    SHOP MEN’S COLLECTION
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="recommend d-flex j-center">
+        <div class="container">
+            <div class="recommend-container">
+                <nav class="recommend-nav-menu d-flex">
+                    <div class="item">POPULAR</div>
+                    <div class="item">NEW ARRIVALS</div>
+                    <div class="item">BEST SELLERS</div>
+                    <div class="item">SPECIAL OFFERS</div>
+                    <div class="item">COMING SOON</div>
+                </nav>
+                <div class="recommend-products d-flex j-between">
+                    <div class="section d-flex j-between">
+                        <div class="d-flex small-img d-flex j-between">
+                            <div>
+                                <img src="assets/img/photo2.png" alt="img">
+                            </div>
+                            <div>
+                                <img src="assets/img/photo3.png" alt="img">
+                            </div>
+                        </div>
+                        <div class="big-img">
+                            <img src="assets/img/photo4.png" alt="img">
+                        </div>
+                    </div>
+                    <div class="section d-flex j-between">
+                        <div class="big-img">
+                            <img src="assets/img/photo5.png" alt="img">
+                        </div>
+                        <div class="small-img d-flex j-between">
+                            <div>
+                                <img src="assets/img/photo6.png" alt="img">
+                            </div>
+                            <div>
+                                <img src="assets/img/photo7.png" alt="img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="news d-flex j-center">
+        <div class="container">
+            <div class="news-container d-flex j-around">
+                <div class="new d-flex j-around">
+                    <div class="photo-new">
+                        <img src="assets/img/REPLACE8.png" alt="">
+                    </div>
+                    <div class="text-new d-flex j-center">
+                        <div class="title-new">
+                            <span class="bold">MEN’S</span>
+                            LOOKBOOK
+                        </div>
+                        <div class="new-text">
+                            Lorem ipsum dolor sit amet eras facilisis
+                            consectetur adipiscing elit lor, integer lorem consecteur dignissim laciniqui.
+                            Elementum metus facilisis ut phasellu.
+                        </div>
+                        <div class="btn-new">VIEW NOW</div>
+                    </div>
+                </div>
+                <div class="new d-flex j-around">
+                    <div class="photo-new">
+                        <img src="assets/img/REPLACE9.png" alt="">
+                    </div>
+                    <div class="text-new d-flex j-center">
+                        <div class="title-new">
+                            <span class="bold">WOMEN’S</span>
+                            LOOKBOOK
+                        </div>
+                        <div class="new-text">
+                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames .
+                            Pellentesque laoreet quis enim et mattis. Quisque interdum felis tellus.
+                        </div>
+                        <div class="btn-new">VIEW NOW</div>
+                    </div>
+                </div>
+                <div class="new d-flex j-around">
+                    <div class="photo-new">
+                        <img src="assets/img/photo%20silhouette10.png" alt="">
+                    </div>
+                    <div class="text-new d-flex j-center">
+                        <div class="title-new">
+                            <span class="bold">YOUR</span>
+                            LOOKBOOK
+                        </div>
+                        <div class="new-text">
+                            See an item you like and click the
+                             button to add it to your lookbook where you can create your own perfect look.
+                            It’s like your own boutique!
+                        </div>
+                        <div class="btn-new">VIEW NOW</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <section class="information d-flex j-center">
+        <div class="container">
+            <div class="block-sections d-flex j-center">
+                <div class="section-inf">
+                    <div class="title-inf bold">INFORMATION</div>
+                    <div class="inf-cont">
+                        <div class="list-inf">
+                            The brand
+                        </div>
+                        <div class="list-inf">
+                            Local stores
+                        </div>
+                        <div class="list-inf">
+                            Costumers service
+                        </div>
+                        <div class="list-inf">
+                            Privacy & cookies
+                        </div>
+                        <div class="list-inf">
+                            Site map
+                        </div>
+                    </div>
+                </div>
+                <div class="section-inf">
+                    <div class="title-inf bold">
+                        WHY BUY FROM US
+                    </div>
+                    <div class="inf-cont">
+                        <div class="list-inf">
+                            Shipping & returns
+                        </div>
+                        <div class="list-inf">
+                            Secure shopping
+                        </div>
+                        <div class="list-inf">
+                            Testimonials
+                        </div>
+                        <div class="list-inf">
+                            Award winning
+                        </div>
+                        <div class="list-inf">
+                            Ethical trading
+                        </div>
+                    </div>
+                </div>
+                <div class="section-inf">
+                    <div class="title-inf bold">
+                        YOUR ACCOUNT
+                    </div>
+                    <div class="inf-cont">
+                        <div class="list-inf">
+                            Sign in
+                        </div>
+                        <div class="list-inf">
+                            Register
+                        </div>
+                        <div class="list-inf">
+                            View cart
+                        </div>
+                        <div class="list-inf">
+                            View your lookbook
+                        </div>
+                        <div class="list-inf">
+                            Track an order
+                        </div>
+                        <div class="list-inf">
+                            Update information
+                        </div>
+                    </div>
+                </div>
+                <div class="section-inf">
+                    <div class="title-inf bold">
+                        LOOKBOOK
+                    </div>
+                    <div class="inf-cont">
+                        <div class="list-inf">
+                            Latest posts
+                        </div>
+                        <div class="list-inf">
+                            Men's lookbook
+                        </div>
+                        <div class="list-inf">
+                            Women's lookbook
+                        </div>
+                        <div class="list-inf">
+                            Lookbooks RSS feed
+                        </div>
+                        <div class="list-inf">
+                            View your lookbook
+                        </div>
+                        <div class="list-inf">
+                            Delete your lookbook
+                        </div>
+                    </div>
+                </div>
+                <div class="section-inf">
+                    <div class="title-inf bold">
+                        CONTACT DETAILS
+                    </div>
+                    <div class="inf-cont">
+                        <div class="list-inf">
+                            Head Office: Avenue Fashion,
+                            180-182 Regent Street, London.
+                        </div>
+                        <div class="list-inf">
+                            Telephone: 0123-456-789
+                        </div>
+                        <div class="list-inf">
+                            Email: support@yourwebsite.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-section d-flex a-center j-around">
+                <div class="banner-bottom banner-dis">
+                    <p class="bold">AWARD WINNER</p>
+                    <p>FASHION AWARDS 2016</p>
+                </div>
+                <div class="banner-bottom banner-social d-flex j-around a-center">
+                    <div class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div class="icon">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <div class="icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="icon">
+                        <i class="fab fa-pinterest-p"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer-bottom d-flex j-center">
+        <div class="container d-flex j-around">
+            <div class="licensed footer-item">
+                © 2016 Avenue Fashion™
+            </div>
+            <div class="email_address d-flex">
+                <div class="first footer-item">
+                    Design by RobbyDesigns.com
+                </div>
+                <div class="second footer-item">
+                    Dev by Loremipsum.com
+                </div>
+            </div>
+        </div>
+    </section>
+</footer>
+
+</body>
 </html>
